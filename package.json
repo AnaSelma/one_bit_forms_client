@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -host 0.0.0.0",
+    "start": "ng serve -H 0.0.0.0",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -12,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^4.4.7",
+    "@angular/animations": "^4.4.6",
     "@angular/common": "^4.2.4",
     "@angular/compiler": "^4.2.4",
     "@angular/core": "^4.2.4",
@@ -21,12 +21,13 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
-    "chart.js": "^2.7.1",
+    "angular2-token": "^0.2.0-beta.12",
+    "chart.js": "^2.8.0",
     "core-js": "^2.4.1",
     "mdi": "^2.0.46",
     "ng2-charts": "^1.6.0",
     "ng2-materialize": "^1.6.0",
-    "ngx-color-picker": "^4.5.0",
+    "ngx-color-picker": "^4.0.1",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },

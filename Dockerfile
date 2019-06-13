@@ -1,4 +1,4 @@
-FROM node:9
+FROM node:10
 ENV INSTALL_PATH /onebitforms-client
 RUN npm install -g @angular/cli
 RUN mkdir -p $INSTALL_PATH
