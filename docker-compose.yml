@@ -5,4 +5,5 @@ services:
     ports:
       - '4200:4200'
     volumes:
-      - '.:/onbitforms-client'
+      - '.:/onebitforms-client'
+      - './node_modules:/onebitforms-client/node_modules'
