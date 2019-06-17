@@ -2,10 +2,3 @@
     height: 40px;
     margin-top: 10px;
 }
-
-@media screen and (max-width: 768px) {
-    .brand-logo img{
-        height: 32px;
-        margin-top: 12px;
-    }
-}
