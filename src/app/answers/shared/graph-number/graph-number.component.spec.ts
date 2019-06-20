@@ -1,25 +1,42 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit, Input } from '@angular/core';
+import { QuestionsAnswer } from '../../../shared/questions_answer.model';
 
-import { GraphNumberComponent } from './graph-number.component';
+@Component({
+  selector: 'app-graph-number',
+  templateUrl: './graph-number.component.html',
+  styleUrls: ['./graph-number.component.css']
+})
+export class GraphNumberComponent implements OnInit {
 
-describe('GraphNumberComponent', () => {
-  let component: GraphNumberComponent;
-  let fixture: ComponentFixture<GraphNumberComponent>;
+  @Input() questions_answers: QuestionsAnswer[];
+  public pieChartLabels: string[];
+  public pieChartData: number[];
+  public pieChartType = 'pie';
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ GraphNumberComponent ]
-    })
-    .compileComponents();
-  }));
+  constructor() { }
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(GraphNumberComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  ngOnInit() {
+    const answers = {};
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    for (const qa of this.questions_answers) {
+      if (qa.value != null) {
+        if (answers.hasOwnProperty(qa.value) !== true) {
+          answers[qa.value] = 1;
+        } else {
+          answers[qa.value] += 1;
+        }
+      }
+    }
+
+    const answers_labels = [];
+    const answers_values = [];
+    for (const key in answers) {
+      if (answers.hasOwnProperty(key)) {
+        answers_labels.push(key);
+        answers_values.push(answers[key]);
+      }
+    }
+    this.pieChartLabels = answers_labels;
+    this.pieChartData = answers_values;
+  }
+}
