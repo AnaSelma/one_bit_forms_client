@@ -4,6 +4,7 @@ export class Question {
     id: number;
     title: string;
     kind: string;
+    required: string;
     form_id: number;
     questions_answers: QuestionsAnswer[] = [];
 
@@ -11,6 +12,7 @@ export class Question {
         this.id = questionInfo.id;
         this.title = questionInfo.title;
         this.kind = questionInfo.kind;
+        this.required = questionInfo.required;
         this.form_id = questionInfo.form_id;
         this.includeQuestionsAnswers(questionInfo.questions_answers);
     }
