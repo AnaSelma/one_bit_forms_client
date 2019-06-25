@@ -19,6 +19,7 @@ import { Angular2TokenService } from 'angular2-token';
 import { FormService } from './shared/form.service';
 import { QuestionService } from './shared/question.service';
 import { AnswerService } from './shared/answer.service';
+import { AnswerConfirmationComponent } from './answer-confirmation/answer-confirmation/answer-confirmation.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { AnswerService } from './shared/answer.service';
     HomeComponent,
     HeaderComponent,
     NotFoundComponent,
+    AnswerConfirmationComponent,
   ],
   imports: [
     BrowserModule,
