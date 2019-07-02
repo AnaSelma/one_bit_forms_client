@@ -4,7 +4,7 @@ export class Question {
     id: number;
     title: string;
     kind: string;
-    required: string;
+    required: boolean;
     form_id: number;
     questions_answers: QuestionsAnswer[] = [];
 

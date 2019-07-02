@@ -38,13 +38,16 @@
                     </div>
                   </div>
                   <div class="col m12" *ngIf="questions_answer.question.kind == 'short_text'">
-                    <input type="text" placeholder="Your Answer..." name="value" [(ngModel)]="questions_answer.value" #value="ngModel">
+                    <input type="text" placeholder="Your Answer..." name="value" [(ngModel)]="questions_answer.value" #value="ngModel"
+                           [required]="questions_answer.question.required" />
                   </div>
                   <div class="col m2" *ngIf="questions_answer.question.kind == 'integer'">
-                    <input type="number" placeholder="0" name="value" [(ngModel)]="questions_answer.value" #value="ngModel">
+                    <input type="number" placeholder="0" name="value" [(ngModel)]="questions_answer.value" #value="ngModel"
+                           [required]="questions_answer.question.required" />
                   </div>
                   <div class="col m12" *ngIf="questions_answer.question.kind == 'long_text'">
-                    <textarea placeholder="Your Question" class="materialize-textarea" name="value" [(ngModel)]="questions_answer.value" #value="ngModel">
+                    <textarea placeholder="Your Question" class="materialize-textarea" name="value" [(ngModel)]="questions_answer.value"
+                              #value="ngModel" [required]="questions_answer.question.required">
                     </textarea>
                   </div>
                 </div>
