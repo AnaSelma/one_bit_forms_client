@@ -20,6 +20,7 @@ import { FormService } from './shared/form.service';
 import { QuestionService } from './shared/question.service';
 import { AnswerService } from './shared/answer.service';
 import { AnswerConfirmationComponent } from './answer-confirmation/answer-confirmation/answer-confirmation.component';
+import { DragulaModule } from 'ng2-dragula';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { AnswerConfirmationComponent } from './answer-confirmation/answer-confir
     MaterializeModule.forRoot(),
     ColorPickerModule,
     ChartsModule,
+    DragulaModule,
   ],
   providers: [Angular2TokenService, FormService, QuestionService, AnswerService],
   bootstrap: [AppComponent]

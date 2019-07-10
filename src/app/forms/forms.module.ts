@@ -12,6 +12,7 @@ import { ColorPickerModule } from 'ngx-color-picker';
 import { FormFormComponent } from './form-form/form-form.component';
 import { QuestionFormComponent } from './question-form/question-form.component';
 import { QuestionListComponent } from './question-list/question-list.component';
+import { DragulaModule } from 'ng2-dragula';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { QuestionListComponent } from './question-list/question-list.component';
     MaterializeModule.forRoot(),
     routing,
     CoreFormsModule,
-    ColorPickerModule
+    ColorPickerModule,
+    DragulaModule,
   ],
   exports: [
     FormListComponent

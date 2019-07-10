@@ -24,8 +24,8 @@
           </div>
           <div class="col m3">
             <mz-checkbox-container>
-              <input mz-checkbox [label]="'Required'" type="checkbox" name="required" #required="ngModel" id="checkbox-required-{{ question.id }}"
-                     [(ngModel)]="question.required" />
+              <input mz-checkbox
+              type="checkbox" [label]="'Required'" [filledIn]="true" [attr.id]="question.id" id="{{ question.id }}" [(ngModel)]="question.required" name="required" >
             </mz-checkbox-container>
           </div>
         </div>

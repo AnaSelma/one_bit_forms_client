@@ -24,7 +24,9 @@ export class Form {
 
     private includeQuestions(questions: any) {
         for (const count in questions) {
-            this.questions.push( new Question(questions[count]) );
+            let question = new Question(questions[count]);
+            (question.position == null ? question.position = parseInt(count) : '')
+            this.questions.push( question );
         }
     }
 }

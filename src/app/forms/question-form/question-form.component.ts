@@ -30,9 +30,11 @@ export class QuestionFormComponent implements OnInit {
         this.toastService.show('Problem in Question update', 8000, 'red');
       });
     } else {
+      (!this.question.position ? this.question.position = this.questions.length : '');
+
       this.questionService.createQuestion(this.form_id, this.question).subscribe(data => {
         this.questions.push(new Question(data));
-        this.question = new Question({});
+        this.question = new Question({ position: this.questions.length });
       }, error => {
         this.toastService.show('Problem in Question creation', 8000, 'red');
       });
